@@ -26,12 +26,13 @@ import (
 // GitLab API docs:
 // https://docs.gitlab.com/ee/api/project_badges.html#list-all-badges-of-a-project
 type ProjectBadge struct {
+	Name             string `json:"name"`
 	ID               int    `json:"id"`
 	LinkURL          string `json:"link_url"`
 	ImageURL         string `json:"image_url"`
 	RenderedLinkURL  string `json:"rendered_link_url"`
 	RenderedImageURL string `json:"rendered_image_url"`
-	// Kind represents a project badge kind. Can be empty, when used PreviewProjectBadge().
+	// Kind represents a project badge kind,name Can be empty, when used PreviewProjectBadge().
 	Kind string `json:"kind"`
 }
 
